@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>معلوماتي | Mr AnGeL</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#02060a;--ink:#e8f1ff;--green:#22e66b;--blue:#3aa0ff;--red:#ff3b4e;--tg:#27a7e7;--ig:#e1306c}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Cairo","Segoe UI",Tahoma,sans-serif}
+#rain{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:28px 16px 48px;display:flex;flex-direction:column;gap:18px;align-items:stretch}
+svg.i{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em}
+.hero{text-align:center}
+.avatar{width:160px;height:160px;border-radius:50%;margin:0 auto 12px;padding:4px;background:conic-gradient(from 0deg,#22e66b,#3aa0ff,#ff3b4e,#ffd43b,#22e66b);animation:spin 6s linear infinite;box-shadow:0 0 28px rgba(34,230,107,.45)}
+.avatar img{width:100%;height:100%;border-radius:50%;display:block;object-fit:cover;border:4px solid #000;animation:spin 6s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{margin:0;font-size:2rem;font-weight:900;display:inline-flex;align-items:center;gap:8px;direction:ltr;text-shadow:0 0 14px rgba(58,160,255,.7)}
+.welcome{margin:6px 0 0;color:var(--blue);font-weight:700;font-size:1.2rem;display:flex;gap:8px;justify-content:center;align-items:center;text-shadow:0 0 12px rgba(58,160,255,.55)}
+.card{background:rgba(4,12,18,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:2px solid var(--c,#22e66b);border-radius:18px;padding:16px;box-shadow:0 0 18px color-mix(in srgb,var(--c,#22e66b) 40%,transparent),inset 0 0 14px color-mix(in srgb,var(--c,#22e66b) 12%,transparent)}
+.card h2{margin:0 0 12px;font-size:1.15rem;font-weight:900;display:flex;align-items:center;gap:8px;color:var(--c,#22e66b)}
+.name{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.1rem;margin:0 0 12px}
+.name .en{direction:ltr}
+.sp{font-weight:900;display:flex;align-items:center;gap:8px;margin:0 0 8px;color:var(--green)}
+ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+li{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border-radius:12px;padding:10px 12px;font-weight:700}
+li .ar{color:var(--green);width:1em;height:1em}
+.mr{font-weight:900;letter-spacing:1px;background:linear-gradient(180deg,#fff27a,#ff9f1a 45%,#ff3b1a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 6px #ff6a1a);animation:flick 1.6s ease-in-out infinite alternate}
+@keyframes flick{to{filter:drop-shadow(0 0 12px #ff9f1a)}}
+.item{padding:12px 0;border-top:1px dashed rgba(255,255,255,.14);display:flex;flex-direction:column;gap:10px}
+.item:first-of-type{border-top:0;padding-top:0}
+.item:last-child{padding-bottom:0}
+.item h3{margin:0;font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.btn{display:block;text-align:center;text-decoration:none;font:inherit;font-weight:900;font-size:1.05rem;padding:12px 16px;border-radius:14px;color:#fff;background:#000;border:2px solid #fff;box-shadow:0 0 6px #fff,0 0 16px rgba(255,255,255,.6),inset 0 0 10px rgba(255,255,255,.18);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 10px #fff,0 0 26px rgba(255,255,255,.85),inset 0 0 12px rgba(255,255,255,.28)}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible,.bot:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.py{background:linear-gradient(135deg,#000,#0b4d22 60%,#000);color:#5dff9a;text-shadow:0 0 8px #22e66b}
+.btn.st{background:linear-gradient(135deg,#8a0016,#ff1f3a);text-shadow:0 0 8px #000}
+.btn.pill{border-radius:999px;background:transparent;border-color:var(--p);color:var(--p);box-shadow:0 0 8px var(--p),0 0 22px color-mix(in srgb,var(--p) 55%,transparent),inset 0 0 10px color-mix(in srgb,var(--p) 30%,transparent)}
+.btn.pill:hover{box-shadow:0 0 12px var(--p),0 0 32px var(--p),inset 0 0 14px color-mix(in srgb,var(--p) 40%,transparent)}
+.btn.ig{--p:var(--ig)}.btn.tg{--p:var(--tg)}
+.bot{display:flex;align-items:center;gap:8px;justify-content:center;direction:ltr;text-decoration:none;color:#fff;font-weight:700;padding:11px 14px;border-radius:12px;background:rgba(58,160,255,.1);border:1.5px solid var(--blue);box-shadow:0 0 10px rgba(58,160,255,.35);transition:background .15s}
+.bot:hover{background:rgba(58,160,255,.22)}
+.soc{display:flex;flex-direction:column;gap:12px}
+.soc h2{margin-bottom:0}
+footer{text-align:center;font-size:.8rem;opacity:.6}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff27a"/><stop offset=".5" stop-color="#ff9f1a"/><stop offset="1" stop-color="#ff3b1a"/></linearGradient>
+<linearGradient id="gi" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".4" stop-color="#e1306c"/><stop offset="1" stop-color="#833ab4"/></linearGradient>
+<symbol id="vf" viewBox="0 0 24 24"><path d="M12 1l2.4 2.1 3.2-.3 1 3 2.8 1.6-.9 3.1.9 3.1-2.8 1.6-1 3-3.2-.3L12 23l-2.4-2.1-3.2.3-1-3-2.8-1.6.9-3.1-.9-3.1 2.8-1.6 1-3 3.2.3z" fill="currentColor"/><path d="M7.8 12.3l3 3 5.4-5.8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fire" viewBox="0 0 24 24"><path d="M12 1.5c1.2 3.800 6 6 6 11a6 6 0 0 1-12 0c0-2.300 1-3.800 2.200-5 .2 1.800 1 2.800 2 2.800C10.300 7.500 10.200 4.300 12 1.500z" fill="url(#gf)"/><path d="M12 13c1.800 1.500 2.800 2.500 2.800 4a2.800 2.800 0 0 1-5.600 0c0-1.500 1-2.500 2.800-4z" fill="#fff6b0"/></symbol>
+<symbol id="dn" viewBox="0 0 24 24"><path d="M12 4v14M5.500 12.500L12 19l6.500-6.500" fill="none" stroke="currentColor" stroke-width="2.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ch" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="py" viewBox="0 0 24 24"><path d="M11.900 2C8 2 8.200 3.700 8.200 3.700V6H12v.8H5.500S3 6.500 3 11s2.200 4.300 2.200 4.300h1.300v-2s-.1-2.200 2.200-2.200h3.700s2.100 0 2.100-2.100V4.200S15 2 11.900 2z" fill="#3776ab"/><path d="M12.100 22c3.900 0 3.700-1.700 3.700-1.700V18H12v-.8h6.500s2.500.3 2.500-4.200-2.200-4.300-2.200-4.300h-1.300v2s.1 2.200-2.200 2.200H11.600s-2.100 0-2.100 2.100v3.600S9 22 12.100 22z" fill="#ffd43b"/><circle cx="9.800" cy="4.300" r=".8" fill="#fff"/><circle cx="14.200" cy="19.700" r=".8" fill="#fff"/></symbol>
+<symbol id="mc" viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5z" fill="#4cc54a"/><path d="M3 7l9 5v10l-9-5z" fill="#8a5a2b"/><path d="M21 7l-9 5v10l9-5z" fill="#6b4220"/><path d="M3 7l9 5 9-5v2.500l-9 5-9-5z" fill="#2f8f2d"/></symbol>
+<symbol id="shop" viewBox="0 0 24 24"><path d="M3 9l1.500-5h15L21 9a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z" fill="#ff3b4e"/><path d="M5 12v8h14v-8" fill="none" stroke="#ff3b4e" stroke-width="2"/><path d="M10 20v-4h4v4" fill="#ff3b4e"/></symbol>
+<symbol id="bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3.500" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8V4.500" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="3.500" r="1.500" fill="currentColor"/><circle cx="9" cy="13.500" r="1.700" fill="currentColor"/><circle cx="15" cy="13.500" r="1.700" fill="currentColor"/><path d="M2 12v4M22 12v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="tg" viewBox="0 0 24 24"><path d="M21.500 3.200L2.700 10.400c-1.300.5-1.300 1.200-.2 1.500l4.800 1.500 1.800 5.600c.2.600.1.800.7.800.5 0 .7-.2 1-.5l2.300-2.200 4.800 3.500c.9.500 1.500.2 1.700-.8L22.900 4.600c.3-1.300-.5-1.900-1.400-1.400z" fill="currentColor"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.500" fill="none" stroke="url(#gi)" stroke-width="2.200"/><circle cx="12" cy="12" r="4.200" fill="none" stroke="url(#gi)" stroke-width="2.200"/><circle cx="17.300" cy="6.700" r="1.300" fill="#e1306c"/></symbol>
+</defs>
+</svg>
+
+<main>
+  <header class="hero">
+    <div class="avatar"><img alt="Mr AnGeL" src="avatar.jpg"></div>
+    <h1>Mr AnGeL <svg class="i" style="color:#3aa0ff"><use href="#vf"/></svg></h1>
+    <p class="welcome"><svg class="i"><use href="#fire"/></svg>مـــرحــبا بـكـم في مـعلوماتي</p>
+  </header>
+
+  <section class="card" style="--c:#3aa0ff">
+    <p class="name">اسمي : أوميد | أنجل <span class="en">(Angel)</span> <svg class="i" style="color:#ff3b4e"><use href="#vf"/></svg></p>
+    <p class="sp">اختـصاصي <svg class="i"><use href="#dn"/></svg> :</p>
+    <ul>
+      <li><svg class="i ar"><use href="#ch"/></svg>بــايثون <svg class="i"><use href="#py"/></svg></li>
+      <li><svg class="i ar"><use href="#ch"/></svg>مـاين كرافت <svg class="i"><use href="#mc"/></svg></li>
+      <li><svg class="i ar"><use href="#ch"/></svg>مالك التـيم <span class="mr">MR</span><svg class="i"><use href="#fire"/></svg></li>
+    </ul>
+  </section>
+
+  <section class="card" style="--c:#22e66b">
+    <h2><svg class="i"><use href="#mc"/></svg>قـسـم قــنواتـي مـاين كرافت</h2>
+    <div class="item">
+      <h3>قـناتي مـاين كـرافت الأولى <svg class="i" style="color:#22e66b"><use href="#vf"/></svg></h3>
+      <a class="btn" href="https://t.me/m_s_u_x" target="_blank" rel="noopener">اضغط هنا</a>
+    </div>
+    <div class="item">
+      <h3>قـناتي مـاين كـرافت الثانية <svg class="i" style="color:#000;filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff)"><use href="#vf"/></svg></h3>
+      <a class="btn" href="https://t.me/MinecraftModsPlus100k" target="_blank" rel="noopener">اضغط هنا</a>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#ffd43b">
+    <h2><svg class="i"><use href="#py"/></svg>قـناتي بــايـثون</h2>
+    <a class="btn py" href="https://t.me/TopPython" target="_blank" rel="noopener">اضغط هنا</a>
+  </section>
+
+  <section class="card" style="--c:#ff3b4e">
+    <h2><svg class="i"><use href="#shop"/></svg>قـناتي المتـجـر</h2>
+    <a class="btn st" href="https://t.me/storekurde" target="_blank" rel="noopener">اضغط هنا</a>
+  </section>
+
+  <section class="card" style="--c:#3aa0ff">
+    <h2><svg class="i"><use href="#bot"/></svg>قــسم الــبوتات</h2>
+    <div class="item">
+      <h3>بوتي الأول مودات ماين كرافت <svg class="i"><use href="#mc"/></svg></h3>
+      <a class="bot" href="https://t.me/STARTSZBot" target="_blank" rel="noopener">@STARTSZBot <svg class="i" style="color:#3aa0ff"><use href="#vf"/></svg></a>
+    </div>
+    <div class="item">
+      <h3>بوتي الثاني مودات ماين كرافت <svg class="i"><use href="#mc"/></svg></h3>
+      <a class="bot" href="https://t.me/Bot54224probot" target="_blank" rel="noopener">@Bot54224probot <svg class="i" style="color:#3aa0ff"><use href="#vf"/></svg></a>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#ffd43b">
+    <h2><svg class="i"><use href="#py"/></svg>قـسم بوتات بـايثون</h2>
+    <div class="item">
+      <h3>بوتي بــايثون الأول</h3>
+      <a class="bot" href="https://t.me/TopPythonbot" target="_blank" rel="noopener">@TopPythonbot <svg class="i" style="color:#3aa0ff"><use href="#vf"/></svg></a>
+      <a class="bot" href="https://t.me/vip7vbot" target="_blank" rel="noopener">@vip7vbot <svg class="i" style="color:#3aa0ff"><use href="#vf"/></svg></a>
+    </div>
+  </section>
+
+  <section class="card soc" style="--c:#27a7e7">
+    <h2><svg class="i"><use href="#tg"/></svg>حــسابي تلجرام</h2>
+    <a class="btn pill tg" href="https://t.me/v_a7v" target="_blank" rel="noopener">اضغط هنا</a>
+  </section>
+
+  <section class="card soc" style="--c:#e1306c">
+    <h2 style="color:#e1306c"><svg class="i"><use href="#ig"/></svg>حـسابي انستغرام</h2>
+    <a class="btn pill ig" href="https://instagram.com/y_4_9x" target="_blank" rel="noopener">اضغط هنا</a>
+  </section>
+
+  <footer>Mr AnGeL</footer>
+</main>
+
+<script>
+(function(){
+  var c=document.getElementById('rain'),x=c.getContext('2d');
+  var chars='01234567890123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%&*+<>'.split('');
+  var fs=16,cols,y,w,h;
+  function size(){
+    var d=window.devicePixelRatio||1;
+    w=window.innerWidth;h=window.innerHeight;
+    c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);
+    cols=Math.floor(w/fs);y=[];
+    for(var i=0;i<cols;i++)y[i]=Math.random()*h;
+    x.fillStyle='#02060a';x.fillRect(0,0,w,h);
+  }
+  function draw(){
+    x.fillStyle='rgba(2,6,10,.09)';x.fillRect(0,0,w,h);
+    x.font=fs+'px monospace';
+    for(var i=0;i<cols;i++){
+      x.fillStyle=Math.random()>.97?'#d6ffe4':'#22e66b';
+      x.fillText(chars[Math.floor(Math.random()*chars.length)],i*fs,y[i]);
+      y[i]-=fs;
+      if(y[i]<0&&Math.random()>.975)y[i]=h+Math.random()*60;
+      else if(y[i]<-20)y[i]=h;
+    }
+  }
+  size();window.addEventListener('resize',size);
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){for(var k=0;k<40;k++)draw();}
+  else setInterval(draw,55);
+})();
+</script>
+</body>
+</html>
